@@ -1,4 +1,3 @@
-tap "snowflakedb/snowflake-cli", trusted: { casks: ["snowflake-cli"] }
 # Cloudflare Tunnel client (formerly Argo Tunnel)
 brew "cloudflared"
 # Cryptography and SSL/TLS Toolkit
@@ -27,8 +26,6 @@ brew "pango"
 brew "pipx"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# CLI for snowflake
-brew "snowflake-cli"
 # Terminal multiplexer
 brew "tmux"
 # Tmux session manager. Built on libtmux
@@ -41,4 +38,7 @@ brew "poetry"
 cask "docker-desktop"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "gcloud-cli"
+# CLI for Windmill automation building tool
 npm "windmill-cli"
+# CLI for Kaggle data science competitions
+pip "kaggle"
