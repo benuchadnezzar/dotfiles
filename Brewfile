@@ -42,3 +42,5 @@ cask "gcloud-cli"
 npm "windmill-cli"
 # CLI for Kaggle data science competitions
 pip "kaggle"
+# Support for Python plugins in Neovim
+uv "pynvim"
