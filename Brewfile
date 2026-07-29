@@ -44,3 +44,5 @@ npm "windmill-cli"
 pip "kaggle"
 # Support for Python plugins in Neovim
 uv "pynvim"
+# Implements the client side of Jupyter messaging protocol
+uv "jupyter_client"
