@@ -1,3 +1,5 @@
+# Multiple runtime version manager
+brew "asdf"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
 brew "cloudflared"
 # Cryptography and SSL/TLS Toolkit
@@ -22,8 +24,6 @@ brew "neovim"
 brew "node"
 # Framework for layout and rendering of i18n text
 brew "pango"
-# Execute binaries from Python packages in isolated environments
-brew "pipx"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Terminal multiplexer
@@ -41,7 +41,7 @@ cask "gcloud-cli"
 # CLI for Windmill automation building tool
 npm "windmill-cli"
 # CLI for Kaggle data science competitions
-pip "kaggle"
+uv "kaggle"
 # Support for Python plugins in Neovim
 uv "pynvim"
 # Implements the client side of Jupyter messaging protocol
