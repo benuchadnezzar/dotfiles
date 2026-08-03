@@ -5,7 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-. "$HOME/.asdf/asdf.sh"
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
@@ -15,13 +14,11 @@ autoload -Uz compinit && compinit
 export DIRENV_LOG_FORMAT=""
 eval "$(direnv hook zsh)"
 
-# . "$HOME/.asdf/asdf.sh"
 # # append completions to fpath
 # fpath=(${ASDF_DIR}/completions $fpath)
 # # initialise completions with ZSHs compinit
 # autoload -Uz compinit && compinit
 # source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
-# . "$HOME/.asdf/asdf.sh"
 
 # # append completions to fpath
 # fpath=(${ASDF_DIR}/completions $fpath)
@@ -42,3 +39,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Iris Autocomplete
 eval "$(iris init zsh)"
+
+# Hermes Agent — ensure ~/.local/bin is on PATH
+export PATH="$HOME/.local/bin:$PATH"
+# asdf version-manager shims
+export PATH="${ASDR_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
