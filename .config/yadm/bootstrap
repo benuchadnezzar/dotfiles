@@ -12,5 +12,9 @@ ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
 command -v iris >/dev/null 2>&1 || \
   curl -sSL https://raw.githubusercontent.com/versenilvis/iris/main/scripts/install.sh | sh
 
+# Hermes Agent AI assistant
+command -v hermes >/dev/null 2>&1 || \
+  curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
+
 # Homebrew packages
 brew bundle --file="$HOME/.Brewfile"
