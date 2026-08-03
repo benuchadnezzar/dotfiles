@@ -8,5 +8,9 @@ ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
 [ -d "$ZSH_CUSTOM/plugins/fast-syntax-highlighting" ] || \
   git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git "$ZSH_CUSTOM/plugins/fast-syntax-highlighting"
 
+# iris shell autocomplete
+command -v iris >/dev/null 2>&1 || \
+  curl -sSL https://raw.githubusercontent.com/versenilvis/iris/main/scripts/install.sh | sh
+
 # Homebrew packages
 brew bundle --file="$HOME/.Brewfile"
