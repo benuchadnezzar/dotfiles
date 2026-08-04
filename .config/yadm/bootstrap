@@ -1,19 +1,22 @@
 #!/bin/bash
 set -e
 
+# Homebrew package manager
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 # Oh My Zsh plugins/themes
 ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
-[ -d "ZSH_CUSTOM/themes/powerlevel10k" ] || \
+[ -d "ZSH_CUSTOM/themes/powerlevel10k" ] ||
   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH_CUSTOM/themes/powerlevel10k"
-[ -d "$ZSH_CUSTOM/plugins/fast-syntax-highlighting" ] || \
+[ -d "$ZSH_CUSTOM/plugins/fast-syntax-highlighting" ] ||
   git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git "$ZSH_CUSTOM/plugins/fast-syntax-highlighting"
 
 # iris shell autocomplete
-command -v iris >/dev/null 2>&1 || \
+command -v iris >/dev/null 2>&1 ||
   curl -sSL https://raw.githubusercontent.com/versenilvis/iris/main/scripts/install.sh | sh
 
 # Hermes Agent AI assistant
-command -v hermes >/dev/null 2>&1 || \
+command -v hermes >/dev/null 2>&1 ||
   curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
 
 # Homebrew packages
