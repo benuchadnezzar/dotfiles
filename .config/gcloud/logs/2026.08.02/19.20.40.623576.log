@@ -1,0 +1,9 @@
+2026-08-02 19:20:40,630 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2026-08-02 19:20:40,633 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'virtualenv']
+2026-08-02 19:20:40,642 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'virtualenv', 'enable']
+2026-08-02 19:20:40,647 DEBUG    root            Running [gcloud.config.virtualenv.enable] with arguments: []
+2026-08-02 19:20:40,648 INFO     ___FILE_ONLY___ Virtual env enabled.
+
+2026-08-02 19:20:40,648 DEBUG    root            Chosen display Format:default
+2026-08-02 19:20:40,649 INFO     root            Display format: "default"
+2026-08-02 19:20:40,701 DEBUG    root            On GCE from disk cache: False

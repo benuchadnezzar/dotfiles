@@ -1,4 +1,5 @@
-tap "snowflakedb/snowflake-cli", trusted: { casks: ["snowflake-cli"] }
+# Multiple runtime version manager
+brew "asdf"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
 brew "cloudflared"
 # Cryptography and SSL/TLS Toolkit
@@ -23,12 +24,8 @@ brew "neovim"
 brew "node"
 # Framework for layout and rendering of i18n text
 brew "pango"
-# Execute binaries from Python packages in isolated environments
-brew "pipx"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# CLI for snowflake
-brew "snowflake-cli"
 # Terminal multiplexer
 brew "tmux"
 # Tmux session manager. Built on libtmux
@@ -41,4 +38,11 @@ brew "poetry"
 cask "docker-desktop"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "gcloud-cli"
+# CLI for Windmill automation building tool
 npm "windmill-cli"
+# CLI for Kaggle data science competitions
+uv "kaggle"
+# Support for Python plugins in Neovim
+uv "pynvim"
+# Implements the client side of Jupyter messaging protocol
+uv "jupyter_client"

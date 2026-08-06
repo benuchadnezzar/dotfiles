@@ -1,0 +1,16 @@
+2026-08-02 19:20:06,366 DEBUG    root            Failed to read GCE cache file: [Errno 2] No such file or directory: '/Users/Ben/.config/gcloud/gce'
+2026-08-02 19:20:06,407 DEBUG    root            Failed to check metadata server: <urlopen error [Errno 8] nodename nor servname provided, or not known>
+2026-08-02 19:20:06,422 DEBUG    root            Loaded Command Group: ['gcloud', 'components']
+2026-08-02 19:20:06,429 DEBUG    root            Loaded Command Group: ['gcloud', 'components', 'install']
+2026-08-02 19:20:06,431 DEBUG    root            Running [gcloud.components.install] with arguments: [--compile-python: "True", --quiet: "True", COMPONENT-IDS:5: "['gsutil', 'bundled-python3-unix', 'core', 'bq', 'gcloud-crc32c']"]
+2026-08-02 19:20:06,476 DEBUG    root            On GCE from memory cache: False
+2026-08-02 19:20:06,481 DEBUG    root            On GCE from memory cache: False
+2026-08-02 19:20:06,497 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): dl.google.com:443
+2026-08-02 19:20:06,587 DEBUG    urllib3.connectionpool https://dl.google.com:443 "GET /dl/cloudsdk/channels/rapid/components-v578.0.0.json HTTP/1.1" 200 28450
+2026-08-02 19:20:06,622 INFO     ___FILE_ONLY___ 
+
+2026-08-02 19:20:06,622 INFO     ___FILE_ONLY___ All components are up to date.
+
+2026-08-02 19:20:06,622 DEBUG    root            Updating notification cache...
+2026-08-02 19:20:06,624 DEBUG    root            Chosen display Format:none
+2026-08-02 19:20:06,625 INFO     root            Display format: "none"

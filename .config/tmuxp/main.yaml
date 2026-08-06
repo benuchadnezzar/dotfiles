@@ -12,5 +12,5 @@ windows:
       - shell_command: nvim
         focus: True
       - pane
-      - claude
+      - hermes
 
