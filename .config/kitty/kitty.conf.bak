@@ -5,8 +5,7 @@
 #: kitty has very powerful font management. You can configure
 #: individual font faces and even specify special fonts for particular
 #: characters.
-
-# font_family      monospace
+# font_family      MesloLGS NF
 # bold_font        auto
 # italic_font      auto
 # bold_italic_font auto
@@ -20,7 +19,7 @@
 #: <https://sw.kovidgoyal.net/kitty/kittens/choose-fonts/#font-spec-
 #: syntax>.
 
-# font_size 11.0
+font_size 12.0
 
 #: Font size (in pts).
 
@@ -339,7 +338,7 @@
 #: setting also controls blinking text, which blinks in exact rhythm
 #: with the cursor.
 
-# cursor_trail 0
+cursor_trail 3
 
 #: Set this to a value larger than zero to enable a "cursor trail"
 #: animation. This is an animation that shows a "trail" following the
@@ -355,7 +354,7 @@
 #: cursor_trail_start_threshold to control when a cursor trail is
 #: started.
 
-# cursor_trail_decay 0.1 0.4
+cursor_trail_decay 0.1 0.4
 
 #: Controls the decay times for the cursor trail effect when the
 #: cursor_trail is enabled. This option accepts two positive float
@@ -1962,7 +1961,7 @@
 #: See rc_custom_auth <https://sw.kovidgoyal.net/kitty/remote-
 #: control/#rc-custom-auth> for details.
 
-# allow_remote_control no
+allow_remote_control yes
 
 #: Allow other programs to control kitty. If you turn this on, other
 #: programs can control all aspects of kitty, including sending text
@@ -1991,7 +1990,7 @@
 #: yes
 #:     Remote control requests are always accepted.
 
-# listen_on none
+listen_on unix:/tmp/kitty-remote
 
 #: Listen to the specified socket for remote control connections. Note
 #: that this will apply to all kitty instances. It can be overridden
@@ -3264,3 +3263,17 @@
 #: }}}
 
 #: }}}
+
+
+# BEGIN_KITTY_THEME
+# Outer Wilds
+include outerwilds.conf
+# END_KITTY_THEME
+
+
+# BEGIN_KITTY_FONTS
+font_family      family="EnvyCodeR Nerd Font"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS
