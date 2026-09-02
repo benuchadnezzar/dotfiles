@@ -2,8 +2,10 @@
 set -e
 
 # Oh My Zsh
-RUNZSH=no CHSH=no KEEP_ZSHRC=yes \
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  RUNZSH=no CHSH=no KEEP_ZSHRC=yes \
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 
 # Oh My Zsh plugins/themes
 ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
@@ -13,6 +15,9 @@ ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
 # iris shell autocomplete
 command -v iris >/dev/null 2>&1 ||
   curl -sSL https://raw.githubusercontent.com/versenilvis/iris/main/scripts/install.sh | sh
+
+# Claude Agent AI assistant
+curl -fsSL https://claude.ai/install.sh | bash
 
 # Hermes Agent AI assistant
 command -v hermes >/dev/null 2>&1 ||
