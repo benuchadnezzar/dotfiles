@@ -9,7 +9,7 @@ windows:
     options: {}
     panes:
       - shell_command:
-          - sc-im --listen "$NVIM_SOCKET"
+          - sc-im
         focus: True
       - shell_command: emeraldian
       - shell_command: taskwarrior-tui

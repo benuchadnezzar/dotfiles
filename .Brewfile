@@ -48,6 +48,8 @@ brew "python@3.13"
 brew "resvg"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Systems programming language
+brew "rust"
 # Spreadsheet program for the terminal, using ncurses
 brew "sc-im"
 # 7-Zip is a file archiver with a high compression ratio

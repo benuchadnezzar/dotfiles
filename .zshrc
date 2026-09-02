@@ -25,7 +25,7 @@ eval "$(iris init zsh)"
 export PATH="$HOME/.local/bin:$PATH"
 
 # asdf version-manager shims
-export PATH="${ASDR_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # Cargo
 export PATH="$HOME/.cargo/bin:$PATH"
