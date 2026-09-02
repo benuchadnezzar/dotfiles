@@ -1,0 +1,19 @@
+session_name: "data"
+start_directory: ./
+environment:
+  NVIM_SOCKET: /tmp/data-nvim.sock
+windows:
+  - window-name: main
+    focus: True
+    layout: fffd,205x51,0,0{133x51,0,0[133x39,0,0,8,133x11,0,40,11],71x51,134,0[71x28,134,0,10,71x10,134,29,12,71x11,134,40,13]}
+    options: {}
+    panes:
+      - shell_command:
+          - vd
+      -
+      - shell_command:
+          - nvim --listen "$NVIM_SOCKET"
+      - shell_command:
+          - claude
+        focus: True
+      -

@@ -1,0 +1,17 @@
+session_name: debug
+start_directory: ./
+environment:
+  NVIM_SOCKET: /tmp/debug-nvim.sock
+windows:
+  - window_name: main
+    focus: True
+    layout: aa58,205x51,0,0{143x51,0,0,14,61x51,144,0[61x12,144,0,16,61x12,144,13,21,61x25,144,26,20]}
+    options: {}
+    panes:
+      - shell_command:
+          - nvim --listen "$NVIM_SOCKET"
+      -
+      - shell_command:
+          - claude
+        focus: True
+      - shell_command: lnav

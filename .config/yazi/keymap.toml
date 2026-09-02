@@ -1,0 +1,7 @@
+[[mgr.prepend_keymap]]
+on = "<Enter>"
+run = [
+  "open",
+  "quit --no-cwd-file",
+]
+desc = "Open selected file and quit"

@@ -1,0 +1,16 @@
+session_name: plan
+start_directory: ./
+environment:
+  NVIM_SOCKET: /tmp/plan-nvim.sock
+windows:
+  - window_name: main
+    focus: True
+    layout: b246,205x51,0,0[205x28,0,0{133x28,0,0,13,71x28,134,0,16},205x22,0,29{133x22,0,29,14,71x22,134,29,15}]
+    options: {}
+    panes:
+      - shell_command:
+          - sc-im --listen "$NVIM_SOCKET"
+        focus: True
+      - shell_command: emeraldian
+      - shell_command: taskwarrior-tui
+      -

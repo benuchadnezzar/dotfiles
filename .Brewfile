@@ -1,3 +1,4 @@
+# Homebrew formulae for obsidian-tui
 tap "iamrohithrnair/tap"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
@@ -51,6 +52,8 @@ brew "ripgrep"
 brew "sc-im"
 # 7-Zip is a file archiver with a high compression ratio
 brew "sevenzip"
+# Cross-shell prompt
+brew "starship"
 # Feature-rich console based todo list manager
 brew "task"
 # Shell wrapper for Taskwarrior commands

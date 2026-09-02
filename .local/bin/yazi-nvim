@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+chooser_file="$(mktemp)"
+cwd_file="${XDG_STATE_HOME:-$HOME/.local/state}/yazi-nvim-cwd"
+
+cleanup() {
+  rm -f "$chooser_file"
+}
+
+trap cleanup EXIT
+
+if [[ -z "$NVIM_SOCKET" ]]; then
+  echo "NVIM_SOCKET is not set for this tmux session."
+  exit 1
+fi
+
+mkdir -p "$(dirname "$cwd_file")"
+
+if [[ -s "$cwd_file" ]]; then
+  start_dir="$(cat "$cwd_file")"
+else
+  start_dir="$HOME"
+fi
+
+yazi "$start_dir" \
+  --chooser-file="$chooser_file" \
+  --cwd-file="$cwd_file"
+
+if [[ -s "$chooser_file" ]]; then
+  file="$(head -n 1 "$chooser_file")"
+  nvim --server "$NVIM_SOCKET" --remote "$file"
+fi

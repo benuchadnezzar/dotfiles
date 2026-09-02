@@ -1,0 +1,18 @@
+session_name: build
+start_directory: ./
+environment:
+  NVIM_SOCKET: /tmp/build-nvim.sock
+shell_command_before:
+  - cd ~ && clear
+windows:
+  - window_name: main
+    layout: main-horizontal
+    options:
+      main-pane-height: 70%
+    panes:
+      - shell_command:
+          - nvim --listen "$NVIM_SOCKET"
+      -
+      - shell_command:
+          - claude
+        focus: True

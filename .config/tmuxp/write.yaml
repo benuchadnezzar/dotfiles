@@ -1,0 +1,17 @@
+session_name: write
+start_directory: ./
+environment:
+  NVIM_SOCKET: /tmp/write-nvim.sock
+windows:
+  - window_name: main
+    focus: True
+    layout: 35c9,205x51,0,0[205x38,0,0{139x38,0,0,4,65x38,140,0,8},205x12,0,39{139x12,0,39,6,65x12,140,39,7}]
+    options: {}
+    panes:
+      - shell_command:
+          - nvim --listen "$NVIM_SOCKET"
+      - shell_command: emeraldian
+      - shell_command: taskwarrior-tui
+      - shell_command:
+          - hermes
+        focus: True
